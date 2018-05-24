@@ -1,15 +1,17 @@
+<% include ../partials/header %>
+<div id="overlay"></div>
+<div id="register">
+<a type="button" class="btn btn-primary" href="/login">Login!</a>
+<a type="button" class="btn btn-danger" href="/logout">Logout!</a>
+
 <h1>Sign Up Form</h1>
-
-
-
-
 
 <form action="/register" method="POST">
     <input type="text" name="username" placeholder="username">
     <input type="password" name="password" placeholder="password">
-    <button>Submit</button>
+    <a type="button" class="btn btn-success" href="/register">Submit</a>
 </form>
 
-<li><a href="/register">Sign Up!</a></li>
-<li><a href="/login">Login!</a></li>
-<li><a href="/logout">Logout!</a></li>
+
+</div>
+<% include ../partials/footer %>

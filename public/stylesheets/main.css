@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny|Rammetto+One');
+
+
+body{
+  background:url('https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  }
+  
+ #overlay{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: black;
+	opacity: .8;
+     
+ }
+
+
+#homepage, #login, #register{
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: auto;
+    width: 80%;
+    z-index: 1000;
+    
+}
+
+h1{
+    width: 100%;
+    z-index: 100;
+    color: darkorange;
+    opacity: 0.7;
+    font-family: cursive;
+}
+
+h3{
+    color: white;
+}
+li {
+    list-style-type: none;
+    padding-top: 20px;
+}
+li a{
+    width:150px;
+}
+
+ p{
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    color: darkorange;
+    z-index: 1000;
+  
+}
+
+form input{
+    
+display: block;
+margin:20px auto;
+padding: 5px;
+width: 300px;
+text-align: center; 
+border:none;
+border-radius: 5px;
+
+
+
+}
+
+#login h1{
+    color:white;
+    font-size: 30px;
+}
+
+
+#login a{
+    padding-top: 2px;
+    display: inline-block;
+    position: relative;
+    bottom:0;
+    
+   
+}
+a {
+   position: relative; 
+   z-index: 100px;
+   left:0;
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+

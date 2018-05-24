@@ -9,6 +9,8 @@ var express               = require("express"),
 mongoose.connect("mongodb://localhost/auth_demo_app");
 var app = express();
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + "/public"));
+console.log(__dirname);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -19,6 +21,7 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
+passport.use(new LocalStrategy(User.authenticate()));
 // this 2 lines are responsible to read the session 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -79,7 +82,31 @@ function isLoggedIn(req, res, next){
     }
     res.redirect("/login");
 }
+// LOGIN ROUTES
+//render login form
+app.get("/login", function(req, res){
+   res.render("login"); 
+});
+//login logic
+//middleware
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/secret",
+    failureRedirect: "/login"
+}) ,function(req, res){
+});
 
+app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/");
+});
+
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 
 

@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div id="overlay"></div>
+
+
+<div id="login">
+
+
+<h1>Login</h1>
+
+<form action="/login" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <li><a type="button" class="btn btn-primary" href="/login">Login!</a></li>
+</form>
+<br> <br> <br>
+<a type="button" class="btn btn-success" href="/register">Sign Up!</a>
+
+<a type="button" class="btn btn-danger" href="/logout">Logout!</a>
+
+
+
+</div>
+
+<% include ../partials/footer %>

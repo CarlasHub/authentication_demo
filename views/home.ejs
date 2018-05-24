@@ -1,5 +1,16 @@
-<h1> This the Home Page</h1>
+<% include ../partials/header %>
 
-<li><a href="/register">Sign Up!</a></li>
-<li><a href="/login">Login!</a></li>
-<li><a href="/logout">Logout!</a></li>
+<div id="overlay"></div>
+<div id="homepage">
+
+<h1>Welcome to the user authentication Demo Homepage!</h1>
+<h3>Login to acess the secret Page</h3>
+
+<li><a type="button" class="btn btn-success" href="/register">Sign Up!</a></li>
+<li><a type="button" class="btn btn-primary" href="/login">Login!</a></li>
+<li><a type="button" class="btn btn-danger" href="/logout">Logout!</a></li>
+
+</div>
+
+
+<% include ../partials/footer%>
